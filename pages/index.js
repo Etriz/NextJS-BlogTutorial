@@ -1,17 +1,12 @@
-import Head from 'next/head';
+import Layout from '../components/Layout';
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout home>
       <main>
         <h1 className="title">
-          Read{' '}
+          Built With{' '}
           <Link href="posts/first-post">
             <a>Next.js!</a>
           </Link>
@@ -131,13 +126,8 @@ export default function Home() {
         }
 
         .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .card {
@@ -181,20 +171,6 @@ export default function Home() {
           }
         }
       `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-            Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+    </Layout>
   );
 }
