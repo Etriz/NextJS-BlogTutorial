@@ -110,7 +110,7 @@ const Layout = ({ children, home }) => {
         }
 
         .borderCircle {
-          border-radius: 9999px;
+          border-radius: 2rem;
         }
 
         .colorInherit {
