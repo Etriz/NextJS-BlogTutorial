@@ -21,7 +21,7 @@ const FirstPost = ({ allPostsData }) => {
             <li key={id}>
               {title}
               <br />
-              {id}
+              <a href={`${id}`}>{id}</a>
               <br />
               {date}
             </li>
